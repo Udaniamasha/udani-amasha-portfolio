@@ -4,14 +4,14 @@ Welcome to my personal portfolio! This repository contains my **professional por
 
 ---
 
-## 🌟 About
+##  About
 
 I’m **Udani Amasha**, a Computer Science undergraduate passionate about **front-end development, UI/UX design, and creating user-centered web experiences**.  
 Through this portfolio, I aim to present my technical projects, creative work, and professional journey in a clean, responsive, and modern design.
 
 ---
 
-## 💻 Features
+##  Features
 
 - **Responsive Design:** Optimized for desktop, tablet, and mobile devices.  
 - **Hero Section:** Professional introduction with call-to-action buttons.  
@@ -22,7 +22,7 @@ Through this portfolio, I aim to present my technical projects, creative work, a
 
 ---
 
-## 🛠 Technologies Used
+##  Technologies Used
 
 - **Frontend:** HTML5, CSS3  
 - **Styling:** Custom CSS with modern layout techniques (Flexbox & CSS Grid)  
@@ -31,7 +31,7 @@ Through this portfolio, I aim to present my technical projects, creative work, a
 
 ---
 
-## 🔗 Explore
+##  Explore
 
 - [Home](https://Udaniamasha.github.io/portfolio/)  
 - [About Me](https://Udaniamasha.github.io/portfolio/about.html)  
@@ -41,7 +41,7 @@ Through this portfolio, I aim to present my technical projects, creative work, a
 
 ---
 
-## 📂 Folder Structure
+##  Folder Structure
 portfolio/
 ├── index.html
 ├── about.html
@@ -55,7 +55,7 @@ portfolio/
 
 ---
 
-## 🚀 How to Run Locally
+##  How to Run Locally
 
 1. Clone the repository:
    ```bash
