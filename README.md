@@ -33,11 +33,11 @@ Through this portfolio, I aim to present my technical projects, creative work, a
 
 ##  Explore
 
-- [Home](https://Udaniamasha.github.io/portfolio/)  
-- [About Me](https://Udaniamasha.github.io/portfolio/about.html)  
-- [Projects](https://Udaniamasha.github.io/portfolio/projects.html)  
-- [Blog](https://Udaniamasha.github.io/portfolio/blog.html)  
-- [Contact](https://Udaniamasha.github.io/portfolio/form.html)  
+- [Home](https://udaniamasha.github.io/udani-amasha-portfolio/index.html)  
+- [About Me](https://udaniamasha.github.io/udani-amasha-portfolio/about.html)  
+- [Projects](https://udaniamasha.github.io/udani-amasha-portfolio/projects.html)  
+- [Blog](https://udaniamasha.github.io/udani-amasha-portfolio/blog.html)  
+- [Contact](https://udaniamasha.github.io/udani-amasha-portfolio/form.html)  
 
 ---
 
