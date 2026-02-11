@@ -58,14 +58,12 @@ portfolio/
 ## 🚀 How to Run Locally
 
 1. Clone the repository:
+   ```bash
+   git clone https://github.com/YOUR_USERNAME/portfolio.git
 
-```bash
-git clone https://github.com/YOUR_USERNAME/portfolio.git
+3. Open index.html in your browser.
 
-
-2. Open index.html in your browser.
-
-3. Navigate through the portfolio using the links.
+4. Navigate through the portfolio using the links.
 
 ## Connect With Me
 
