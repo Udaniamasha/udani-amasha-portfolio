@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Blog — Social & Tech</title>
+  <link rel="stylesheet" href="Stylesheet.css">
+</head>
+<body>
+  
+  <!-- This is the main header that appears on every page. -->
+  <!-- It contains the main title and the primary navigation links. -->
+  <header>
+    <h1>Social & Tech Blog</h1>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="blog.html" class="active">Blog</a></li>
+            <li><a href="form.html">Contact</a></li>
+        </ul>
+    </nav>
+  </header>
+ <!-- This is the main content area for the blog page. -->
+  <main>
+    <div class="container">
+      <div style="text-align: center; margin-bottom: 50px;">
+        <h2>Reflections on People & Progress</h2>
+        <p><em>Exploring how culture shapes technology, and how technology reshapes us.</em></p>
+      </div>
+
+      <!--  This section contains the first category of blog posts. -->
+      <section id="social">
+        <h2>Social Issues & Cultural Commentary</h2>
+        <p>Stories and reflections about people, values, and change in the modern world.</p>
+
+         <!-- This block is the responsive grid that holds all the blog post cards. -->
+        <div class="blog-grid">
+          <!-- Card 1 -->
+          <article class="blog-card">
+           <!-- ... content of the card ... -->
+            <div class="blog-card-image">
+              <a href="./cultural_memory.html"><img src="images/Digital_screens.jpg" alt="Digital screens with culture and art"></a>
+            </div>
+            <div class="blog-card-content">
+              <p class="blog-card-meta"><time datetime="2025-10-26">October 26, 2025</time></p>
+              <h3>Cultural Memory in the Digital Age</h3>
+              <p class="excerpt">
+                From memes to micro-videos, our culture spreads at lightning speed, but often loses depth. 
+                What happens when centuries of rituals, languages, and traditions are squeezed into a 10-second clip?
+              </p>
+              <a href="./cultural_memory.html" class="read-more-btn">Read More</a>
+            </div>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="blog-card">
+            <div class="blog-card-image">
+              <a href="young_stress.html"><img src="images/Work_stress.jpg" alt="Young professional with laptop"></a>
+            </div>
+            <div class="blog-card-content">
+              <p class="blog-card-meta"><time datetime="2025-09-29">Sep 29, 2025</time></p>
+              <h3>The Exhaustion of Personal Branding: Why We Need to Redefine Success</h3>
+              <p class="excerpt">
+                Careers today unfold under the spotlight of social media. Every milestone feels like a public performance, 
+                juggling ambition with anxiety and creativity with comparison.
+              </p>
+              <a href="./young_stress.html" class="read-more-btn">Read More</a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- This section contains the second category of blog posts. -->
+      <section id="tech">
+        <h2>Technology Trends & Future Predictions</h2>
+        <p>The future is closer than you think: how tomorrow’s innovations will touch how we live, work, and create..</p>
+        
+        <div class="blog-grid">
+          <!-- Card 3 -->
+          <article class="blog-card">
+            <div class="blog-card-image">
+              <a href="./ai_augments.html"><img src="images/Artificial_intelligence.jpg" alt="Artificial intelligence concept with human and robot hands"></a>
+            </div>
+            <div class="blog-card-content">
+              <p class="blog-card-meta"><time datetime="2025-10-15">October 15, 2025</time></p>
+              <h3>AI That Augments, Not Replaces</h3>
+              <p class="excerpt">
+                The next era of AI isn’t about replacement, it’s about partnership. The best systems will amplify human creativity rather than automate it away.
+              </p>
+              <a href="./ai_augments.html" class="read-more-btn">Read More</a>
+            </div>
+          </article>
+          <!-- Card 4 -->
+          <article class="blog-card">
+            <div class="blog-card-image">
+               <a href="./sustainable_tech.html"><img src="images/Recycled_electronics.jpg" alt="Recycled electronics and sustainability concept"></a>
+            </div>
+            <div class="blog-card-content">
+              <p class="blog-card-meta"><time datetime="2025-09-29">Sep 29, 2025</time></p>
+              <h3>Sustainable Tech: Beyond Power Savings</h3>
+              <p class="excerpt">
+                Green tech isn’t just saving power, it’s building devices that last, materials that recycle, and supply chains that care.
+              </p>
+              <a href="./sustainable_tech.html" class="read-more-btn">Read More</a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      
+      <!-- A final section on the blog page that provides a brief summary of the blog's purpose. --> 
+      <section id="about">
+        <h2><strong>This Blog</strong> </h2>
+        <p>Hi, I’m <strong>Udani Amasha</strong>, a Computer Science undergraduate fascinated by how technology intersects with
+          human values. This blog is my space to share ideas, reflections, and predictions about the digital world we are
+          shaping together.I explore how innovation influences the way we think, connect, and create, from AI and emerging technologies to the
+          ethical questions they raise. Through my posts, I aim to spark thoughtful conversations and inspire a more
+          human-centered approach to technology.</p>
+
+        <p><b>Contact:</b> <a href="mailto:udani@example.com">udanivithanage10@gmail.com</a></p>
+      </section>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+<footer>
+    <div class="container footer-container">
+
+        <!-- Zone 1: Branding and About -->
+        <div class="footer-top">
+            <h3>Udani Amasha</h3>
+            <p>An exploration of technology, society, and digital innovation.</p>
+        </div>
+
+        <!-- Zone 2: Main Content (Navigation and Socials) -->
+        <div class="footer-main">
+            <div class="footer-column">
+                <h4>Navigate</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Me</a></li>
+                    <li><a href="blog.html" class="active">Blog</a></li>
+                    <li><a href="form.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Connect</h4>
+                <ul class="footer-social-links">
+                    <li><a href="https://github.com/Udaniamasha" target="_blank">GitHub</a></li>
+                    <li><a href="https://www.linkedin.com/in/udaniamasha/" target="_blank">LinkedIn</a></li>
+                    
+                </ul>
+            </div>
+        </div>
+
+        <!-- Zone 3: Copyright and Legal -->
+        <div class="footer-bottom">
+            <p>&copy; 2025 Udani Amasha — A Portfolio Project</p>
+        </div>
+
+    </div>
+</footer>
+
+</body>
+</html>

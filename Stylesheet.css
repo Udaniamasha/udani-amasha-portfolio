@@ -1,0 +1,988 @@
+/*
+  COURSEWORK CSS FOR 5COSC026W
+  Author: Udani Amasha
+  UoW Number-2120299
+*/
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400&family=Roboto:wght@300;400;700&display=swap');
+
+/* --- PROJECT SETUP --- */
+
+:root {
+  --font-primary: 'Roboto', sans-serif;
+  --font-headings: 'Lora', serif;
+
+  --color-primary: #1e3a5f;      /* Deep navy */
+  --color-accent: #2563eb;       /* Professional blue */
+  --color-accent-hover: #1d4ed8;
+  --color-secondary: #64748b;    /* Slate gray */
+
+  --color-background: #f4f6f9;   /* Soft neutral background */
+  --color-text: #1f2937;         /* Dark gray text */
+  --color-border: rgba(0, 0, 0, 0.08);
+
+  --glow-shadow: rgba(37, 99, 235, 0.15);
+  --glow-shadow-hover: rgba(37, 99, 235, 0.3);
+}
+
+
+/* --- GENERAL PAGE STYLES --- */
+
+/* Sets the default look for all text and the page background. */
+/* Also ensures the footer sticks to the bottom. */
+body {
+  font-family: var(--font-primary);
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--color-text);
+  background-color: var(--color-background);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Keeps the main content in a centered column of a readable width. */
+.container {
+  width: 90%;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+/* Allows the main content area to fill the available height. */
+main {
+  flex-grow: 1;
+}
+
+section:nth-of-type(1) { animation-delay: 0.1s; }
+section:nth-of-type(2) { animation-delay: 0.2s; }
+section:nth-of-type(3) { animation-delay: 0.3s; }
+section:nth-of-type(4) { animation-delay: 0.4s; }
+
+
+/* --- TEXT STYLES --- */
+
+/* The main style for all headings. */
+h1, h2, h3, h4 {
+  font-family: var(--font-headings);
+  color: var(--color-primary);
+  text-transform: none;
+  letter-spacing: 0.5px;
+}
+
+
+/* Specific style for the main page title. */
+h1 {
+  text-align: center;
+  font-size: 2.8rem;
+  text-shadow: 2px 2px 5px var(--glow-shadow);
+  font-weight: 700;
+  margin: 20px 0;
+}
+
+/* Styles the small subtitle text directly under a heading. */
+h2 + p {
+  margin-top: 0;
+  font-style: italic;
+  color: #7f8c8d;
+}
+
+/* --- HEADER AND NAVIGATION --- */
+
+/* Creates the "frosted glass" header that stays at the top when scrolling. */
+header {
+  background: rgba(255, 255, 255, 0.85);
+  padding: 15px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  text-align: center;
+}
+
+/* The site title inside the header. */
+header h1 {
+  color:#2f4d32;
+  margin: 0 0 15px 0;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+/* The list of navigation links. */
+header nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+/* The look of the individual navigation "pills". */
+header nav > ul > li > a {
+  text-decoration: none;
+  color: var(--color-text);
+  font-weight: 600;
+  font-size: 0.95rem;
+  display: inline-block;
+  padding: 10px 24px;
+  border-radius: 50px;
+  border: 1px solid transparent;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+/* The "lift and glow" effect when you mouse over a link. */
+header nav > ul > li > a:hover {
+  color: var(--color-primary);
+  background: rgba(123, 174, 127, 0.08);
+  border-color: rgba(123, 174, 127, 0.2);
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px var(--glow-shadow);
+}
+
+/* The special look for the link of the current page. */
+header nav > ul > li > a.active {
+  color: white;
+  background-image: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+  box-shadow: 0 4px 15px var(--glow-shadow-hover);
+  font-weight: 700;
+}
+
+/* A subtle lift when you mouse over the active link. */
+header nav > ul > li > a.active:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px var(--glow-shadow-hover);
+}
+
+/* --- OTHER STYLES --- */
+
+/* Adds an arrow icon to links that open in a new tab. */
+a[target="_blank"]::after {
+  content: ' ↗';
+  font-size: 0.8em;
+  display: inline-block;
+}
+
+/* --- MAIN CONTENT BOXES --- */
+
+/* The style for the main white content boxes. */
+section {
+  padding: 30px;
+  margin-bottom: 25px;
+  background: white;
+  border-left: 5px solid var(--color-primary);
+  border-radius: 0 12px 12px 0;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+/* The lifting effect on the content boxes when you mouse over them. */
+section:hover {
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.07);
+  transform: translateY(-3px);
+}
+
+/* Styles for individual posts or parts inside a content box. */
+article {
+  margin-bottom: 40px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+/* Removes the line from the last item in a section. */
+section article:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+/* General styles for all images on the site. */
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+ 
+/* --- HOMEPAGE REFINEMENTS --- */
+
+.welcome-section-content {
+  text-align: left;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.welcome-section h2 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: 15px;
+}
+
+.highlight {
+  color: var(--color-accent);
+}
+
+.sidebar {
+  background: white;
+  border-left: 5px solid var(--color-primary);
+  border-radius: 0 12px 12px 0;
+  padding: 25px 30px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
+}
+
+.sidebar h3 {
+  color: var(--color-primary);
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0 20px 0;
+}
+
+.sidebar li {
+  margin-bottom: 10px;
+  color: var(--color-text);
+}
+
+/* --- ABOUT ME PAGE --- */
+
+/* The two-column layout for the photo and text. */
+.about-me-container {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+/* The container for the profile picture. */
+.about-me-photo {
+  flex-basis: 200px;
+  flex-shrink: 0;
+}
+
+/* Makes the profile picture a perfect circle. */
+.about-me-photo img {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+/* The container for the text next to the photo. */
+.about-me-text {
+  flex-grow: 1;
+}
+#technical-skills {
+  padding: 40px 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  margin: 30px auto; /* centers the section container */
+  max-width: 960px; /* keeps it consistent with other sections */
+  text-align: center; /* ensures headings & paragraphs are centered */
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  justify-content: center; /* centers the grid items as a block */
+  align-items: start;
+}
+
+.skill-category {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  max-width: 250px; /* prevents cards from stretching too wide */
+  margin: 0 auto; /* centers each card in its grid cell */
+  text-align: center;
+}
+
+.skill-category:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+ 
+/* --- PROJECTS --- */
+.project {
+    margin: 40px 0;
+    padding: 30px 25px;
+    border-radius: 12px;
+    background-color: #ffffff; /* matches main content boxes */
+    border-left: 5px solid var(--color-primary);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+}
+
+.project:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.12);
+}
+
+.project h2 {
+  font-size: 1.9rem;
+  color: var(--color-primary);
+  font-weight: 700;
+  margin-bottom: 10px;
+  border-bottom: 2px solid var(--color-accent);
+  padding-bottom: 5px;
+}
+
+.project h3 {
+  color: var(--color-accent);
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-top: 20px;
+}
+ 
+.project ul, 
+.project li {
+    color: var(--color-text);
+    line-height: 1.6;
+}
+
+.project ul {
+    padding-left: 20px;
+    margin: 10px 0 20px 0;
+}
+
+.project p a {
+  display: inline-block;
+  padding: 8px 20px;
+  margin: 5px 10px 0 0;
+  border-radius: 6px;
+  background-image: linear-gradient(135deg, var(--color-primary), var(--color-accent));
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.project p a:hover {
+  background-image: linear-gradient(135deg, var(--color-accent), var(--color-primary));
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px var(--glow-shadow);
+}
+
+section {
+  padding: 25px 30px;
+  margin-bottom: 20px;
+}
+
+
+
+/* --- FEATURED PROJECT --- */
+.featured-project {
+    border-left: 8px solid var(--color-accent);
+    background-color: #f3f7fb; /* subtle highlight */
+    padding-left: 25px;
+    margin-bottom: 50px;
+}
+
+/* --- SKILLS & CHALLENGES --- */
+.project .skills,
+.project .features,
+.project .challenges {
+    margin-bottom: 15px;
+}
+
+/* Responsive adjustments for projects */
+@media (max-width: 768px) {
+    .project {
+        padding: 20px 15px;
+    }
+    .project h2 { font-size: 1.5rem; }
+    .project h3 { font-size: 1.15rem; }
+}
+
+
+
+
+/* --- FORMS --- */
+
+/* The main container and border for the forms. */
+form {
+  margin: 30px auto;
+  max-width: 600px;
+}
+fieldset {
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  padding: 30px;
+  background: white;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+/* The title of the form. */
+legend {
+  font-family: var(--font-headings);
+  font-size: 1.5rem;
+  padding: 0 15px;
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+/* The text labels above the input fields. */
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+/* The look of the text fields. */
+input[type="text"], input[type="email"], textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  font-family: var(--font-primary);
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  background: var(--color-background);
+}
+
+/* The glow effect when you click into a field. */
+input[type="text"]:focus, input[type="email"]:focus, textarea:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  background: white;
+  box-shadow: 0 0 0 4px var(--glow-shadow);
+}
+
+/* The green and red border for instant feedback on required fields. */
+input[required]:invalid { border-left: 4px solid #fc0000; }
+input[required]:valid { border-left: 4px solid #2ecc71; }
+
+/* The style for the main submit button. */
+button[type="submit"] {
+  display: inline-block;
+  padding: 14px 35px;
+  border: none;
+  border-radius: 8px;
+  background-image: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 20px var(--glow-shadow);
+}
+
+/* The lifting effect for the submit button. */
+button[type="submit"]:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 30px var(--glow-shadow-hover);
+}
+
+/* --- HOMEPAGE BANNER --- */
+
+/* Applies a standard margin to all sections, except the welcome banner. */
+main > section:not(.welcome-section) {
+    margin: 20px auto;
+    max-width: 960px;
+}
+
+/* Styles for the big welcome banner on the homepage. */
+.welcome-section {
+  text-align: center;
+  padding: 70px 100px;
+  background-image: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+  border: none;
+  border-radius: 12px;
+  color: white;
+  box-shadow: 0 10px 40px var(--glow-shadow-hover);
+  margin-top: 20px;
+}
+
+.welcome-section h2 {
+  color: rgb(0, 0, 0);
+  font-size: 3rem;
+  margin-bottom: 10px;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  font-weight: 200;
+  margin-top: auto;
+}
+
+.welcome-section p {
+  color: white;
+  opacity: 0.9;
+  font-size: 1.2rem;
+  font-weight: 500;
+  max-width: 700px;
+  margin: 10px auto;
+}
+
+.cv-link {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #afbbc8; /* Blue button */
+  color: #0d0c0c;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.cv-link:hover {
+  background-color: #111078; /* Darker on hover */
+  color: #ffffff;
+}
+
+/* --- HOMEPAGE HERO --- */
+.hero-section {
+  background-color: #f9fafb; /* soft, minimal background */
+  color: var(--color-text);
+  padding: 60px 30px;
+  border-radius: 8px; /* subtle rounding */
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.hero-section h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: 15px;
+}
+
+.hero-section p {
+  max-width: 650px;
+  margin: 10px auto;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+
+.hero-cta {
+  margin-top: 25px;
+}
+
+.hero-cta a {
+  display: inline-block;
+  margin: 8px;
+  padding: 10px 26px;
+  border-radius: 6px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.cta-btn {
+  display: inline-block;
+  padding: 12px 28px;
+  margin: 8px;
+  border-radius: 6px;
+  background-color: var(--color-primary);
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.cta-btn:hover {
+  background-color: var(--color-accent);
+  color: white;
+  transform: translateY(-2px);
+}
+
+.cta-btn.secondary {
+  background: transparent;
+  border: 2px solid var(--color-primary);
+  color: var(--color-primary);
+}
+
+.cta-btn.secondary:hover {
+  background: white;
+  color:rgb(21, 21, 87);
+}
+
+/* --- ABOUT PREVIEW --- */
+.about-preview {
+  background: white;
+  border-left: 5px solid var(--color-primary);
+  border-radius: 0 12px 12px 0;
+  padding: 40px 30px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+.about-preview h2 {
+  color: var(--color-primary);
+  margin-bottom: 15px;
+}
+
+.about-preview p {
+  max-width: 720px;
+  margin: 0 auto 20px auto;
+  color: var(--color-text);
+  line-height: 1.7;
+}
+
+/* --- FEATURED PROJECTS --- */
+.featured-projects {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.featured-projects h2 {
+  color: var(--color-primary);
+  margin-bottom: 10px;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  margin-top: 25px;
+}
+
+.project-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.05);
+  padding: 25px;
+  text-align: left;
+  border-left: 5px solid var(--color-primary);
+  transition: all 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.project-card h3 {
+  color: var(--color-primary);
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+}
+
+.project-card p {
+  margin-bottom: 15px;
+  color: var(--color-text);
+  line-height: 1.6;
+}
+
+.project-card a {
+  font-weight: 600;
+  color: var(--color-accent);
+  text-decoration: none;
+}
+
+.project-card a:hover {
+  text-decoration: underline;
+  color: var(--color-accent-hover);
+}
+
+/* --- CONNECT SECTION --- */
+.connect-home {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #f9fafb;
+  border-radius: 12px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.03);
+  margin-bottom: 60px;
+}
+
+.connect-home h2 {
+  color: var(--color-primary);
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+}
+
+.connect-buttons a {
+  display: inline-block;
+  margin: 10px;
+  padding: 12px 28px;
+  border-radius: 6px;
+  text-decoration: none;
+  color: white;
+  background-image: linear-gradient(135deg, var(--color-primary), var(--color-accent));
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.connect-buttons a:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px var(--glow-shadow-hover);
+}
+
+
+
+/* --- FOOTER --- */
+
+/* Styles for the multi-part footer at the bottom of the page. */
+footer {
+  padding: 50px 0 20px 0;
+  background: white;
+  color: var(--color-text);
+  border-top: 1px solid var(--color-border);
+  box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.03);
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.footer-top {
+  text-align: center;
+  border-bottom: 1px solid var(--color-border);
+  padding-bottom: 30px;
+}
+.footer-top h3 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color:#2f4d32;
+  margin: 0 0 10px 0;
+}
+.footer-top p {
+  font-style: italic;
+  color: #7f8c8d;
+  margin: 0;
+}
+
+.footer-main {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+.footer-column {
+  min-width: 200px;
+  text-align: center;
+}
+.footer-column h4 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--color-text);
+  margin: 0 0 15px 0;
+  position: relative;
+  padding-bottom: 10px;
+}
+.footer-column h4::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 3px;
+  background-image: linear-gradient(120deg, var(--color-primary), var(--color-secondary));
+  border-radius: 2px;
+}
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.footer-column li {
+  margin-bottom: 10px;
+}
+.footer-column a {
+  text-decoration: none;
+  color: var(--color-primary);
+  font-weight: 500;
+}
+.footer-column a:hover {
+  color: var(--color-accent);
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid var(--color-border);
+  padding-top: 20px;
+}
+.footer-bottom p {
+  margin: 0;
+  font-size: 0.9rem;
+  opacity: 0.7;
+}
+
+/* --- ANIMATIONS --- */
+
+/* The fade-in animation for content sections. */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Applying the animation. */
+main > section {
+  animation: fadeIn 0.7s ease-in-out forwards;
+}
+
+/* --- BLOG PAGE --- */
+
+/* The responsive grid for the blog posts. */
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+/* The style for a single blog post card. */
+.blog-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+}
+
+/* The lifting effect when you mouse over a card. */
+.blog-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 35px rgba(123, 174, 127, 0.15);
+}
+
+/* The alternating accent color for every other card. */
+.blog-grid .blog-card:nth-child(even) {
+  border-left-color: var(--color-secondary);
+}
+
+.blog-card-image img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 0;
+}
+
+.blog-card-content {
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.blog-card-content h3 {
+  margin-top: 0;
+  font-size: 1.4rem;
+}
+
+.blog-card-content p.excerpt {
+  flex-grow: 1;
+  margin-bottom: 20px;
+}
+
+.blog-card-meta {
+  font-size: 0.85rem;
+  color: #7f8c8d;
+  margin-bottom: 15px;
+}
+
+/* The style for the "Read More" button on the cards. */
+.read-more-btn {
+  display: inline-block;
+  align-self: flex-start;
+  padding: 10px 25px;
+  border-radius: 8px;
+  text-decoration: none;
+  background-image: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+  color: white;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px var(--glow-shadow);
+}
+
+.read-more-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px var(--glow-shadow-hover);
+}
+
+/* --- SINGLE ARTICLE PAGE --- */
+
+/* Styles for the individual article pages, for easy reading. */
+.single-post {
+  max-width: 750px;
+  margin: 0 auto;
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 5px 25px rgba(0,0,0,0.05);
+}
+
+.single-post-image {
+  margin-bottom: 30px;
+}
+
+.single-post-image img {
+  width: 100%;
+  border-radius: 12px;
+}
+
+.single-post-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.single-post-header h1 {
+  font-size: 2.6rem;
+  margin-bottom: 10px;
+}
+
+.single-post-content {
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+/* A special look for quoted text inside an article. */
+.single-post-content blockquote {
+  border-left: 4px solid var(--color-primary);
+  padding-left: 20px;
+  margin: 30px 0;
+  font-style: italic;
+  font-size: 1.2rem;
+  color: var(--color-primary);
+}
+
+.back-to-blog {
+  margin-top: 40px;
+  text-align: center;
+}
+
+/* --- MOBILE DESIGN --- */
+
+/* Adjusts the layout for mobile phones and smaller screens. */
+@media (max-width: 768px) {
+  h1 { font-size: 2.2rem; }
+  .container { width: 95%; }
+  .welcome-section { padding: 50px 15px; }
+  .welcome-section h2 { font-size: 2rem; }
+}
+
+/* Adjusts the layout for larger desktop screens. */
+@media (min-width: 769px) {
+  .home-layout {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+  }
+  .home-layout .welcome-section {
+    flex: 2;
+    margin-top: 0;
+  }
+  .home-layout aside {
+    flex: 1;
+    margin-top: 0;
+  }
+}
